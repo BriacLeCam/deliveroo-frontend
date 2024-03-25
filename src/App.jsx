@@ -32,7 +32,7 @@ function App() {
   // Tant que isLoading vaut true j'affiche Chargement..., si il vaut false, c'est que le data est dans le state, je peux afficher mon site
   return (
     <>
-      <p>{isLoading === true ? "Chargement..." : "ok"}</p>
+      <p>{isLoading === true ? "Chargement..." : data.restaurant}</p>
     </>
   );
 }

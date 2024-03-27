@@ -8,6 +8,7 @@ import logo from "./assets/images/logo-teal.svg";
 function App() {
   const [data, setData] = useState();
   const [isLoading, setIsLoading] = useState(true);
+  const [cart, setCart] = useState([]);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -42,10 +43,6 @@ function App() {
         <div className="container main-container">
           <section className="col-left">
             {data.categories.map((category) => {
-              // Si la catégorie n'a pas de plats, on ne l'affiche pas
-              // Si la clef meals est un []
-              // Si category.meals.length !== 0
-
               if (category.meals.length !== 0) {
                 return (
                   <div key={category.name}>
